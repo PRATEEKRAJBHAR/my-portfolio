@@ -1,9 +1,14 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, MapPin } from 'lucide-react';
+import { Send, Mail, MapPin, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import { SectionTitle } from '@/components/SectionTitle';
 import { Button } from '@/components/Button';
 import { portfolioConfig } from '@/config/portfolio';
+
+const { serviceId, templateId, publicKey } = portfolioConfig.emailjs;
+
+type Status = 'idle' | 'loading' | 'success' | 'error';
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -11,13 +16,31 @@ export function ContactSection() {
     email: '',
     message: ''
   });
+  const [status, setStatus] = useState<Status>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    setStatus('loading');
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          user_name: formData.name,
+          user_email: formData.email,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+          email: portfolioConfig.email,
+        },
+        publicKey
+      );
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setStatus('error');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -25,6 +48,7 @@ export function ContactSection() {
       ...formData,
       [e.target.name]: e.target.value
     });
+    if (status !== 'idle') setStatus('idle');
   };
 
   return (
@@ -125,9 +149,37 @@ export function ContactSection() {
                 />
               </div>
               
-              <Button type="submit" size="lg" className="w-full flex items-center justify-center gap-2">
-                <Send className="h-5 w-5" />
-                Send Message
+              {status === 'success' && (
+                <div className="flex items-center gap-2 text-green-600 bg-green-50 border border-green-200 rounded-lg px-4 py-3">
+                  <CheckCircle className="h-5 w-5 shrink-0" />
+                  <p className="text-sm font-medium">Message sent! I'll get back to you soon.</p>
+                </div>
+              )}
+
+              {status === 'error' && (
+                <div className="flex items-center gap-2 text-red-600 bg-red-50 border border-red-200 rounded-lg px-4 py-3">
+                  <AlertCircle className="h-5 w-5 shrink-0" />
+                  <p className="text-sm font-medium">Something went wrong. Please try again or email me directly.</p>
+                </div>
+              )}
+
+              <Button
+                type="submit"
+                size="lg"
+                disabled={status === 'loading'}
+                className="w-full flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                {status === 'loading' ? (
+                  <>
+                    <Loader2 className="h-5 w-5 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="h-5 w-5" />
+                    Send Message
+                  </>
+                )}
               </Button>
             </form>
           </motion.div>

@@ -3,6 +3,12 @@
  */
 
 export const portfolioConfig = {
+  // EmailJS Configuration
+  emailjs: {
+    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID as string,
+    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string,
+    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string,
+  },
   // Personal Information
   name: "Prasad Mhaske",
   title: "Full Stack Developer",
@@ -19,13 +25,43 @@ export const portfolioConfig = {
   // Skills with categories
   skills: {
     "Frontend": [
-      "React", "TypeScript", "Next.js", "Tailwind CSS", "HTML5", "CSS3", "JavaScript"
+      "React.js", "Next.js", "TypeScript", "JavaScript (ES6+)",
+      "Tailwind CSS", "HTML5", "CSS3",
+      "Redux / Context API",
+      "SSR / SSG / ISR",
+      "Responsive Design"
     ],
     "Backend": [
-      "Node.js", "Express.js", "PostgreSQL", "MongoDB", "REST APIs", "Prisma"
+      "Node.js", "Express.js",
+      "REST API Development",
+      "Authentication (JWT, OAuth)",
+      "WebSockets (Socket.IO)",
+      "Prisma ORM"
     ],
-    "Tools & Others": [
-      "Git", "Docker", "AWS", "Figma", "VS Code", "Webpack", "Vite"
+    "Databases": [
+      "MongoDB", "PostgreSQL",
+      "Database Design",
+      "Indexing & Query Optimization"
+    ],
+    "DevOps & Tools": [
+      "Git & GitHub",
+      "Docker",
+      "AWS (S3, EC2)",
+      "CI/CD (GitHub Actions)",
+      "Vercel", "Render"
+    ],
+    "Core Concepts": [
+      "Data Structures & Algorithms",
+      "OOPs",
+      "System Design Basics",
+      "Design Patterns",
+      "API Design Principles"
+    ],
+    "Other Tools": [
+      "Figma",
+      "VS Code",
+      "Webpack",
+      "Vite"
     ]
   },
 
@@ -33,32 +69,157 @@ export const portfolioConfig = {
   projects: [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce platform built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-      image: "/api/placeholder/400/250",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
-      githubUrl: "https://github.com/yourusername/ecommerce-platform",
-      liveUrl: "https://your-ecommerce-demo.com",
+      title: "Specialized Cycle Store (MERN Stack E-commerce App)",
+      description: [
+        "A fully responsive, multi-user e-commerce web application designed for cycling enthusiasts to browse, explore, and purchase modern bicycles and accessories. The platform delivers a seamless shopping experience with essential features like authentication, product browsing, wishlist management, cart functionality, and secure checkout.",
+        "Built using the MERN stack, the application ensures efficient data handling, scalable backend architecture, and smooth user interactions across devices."
+      ],
+      images: [
+        "/src/assets/Projects/01.png",
+        "/src/assets/Projects/02.png",
+        "/src/assets/Projects/03.png",
+        "/src/assets/Projects/04.png",
+        "/src/assets/Projects/05.png"
+      ],
+      keyFeatures: [
+        "User authentication (Login/Signup)",
+        "Product listing with detailed view",
+        "Wishlist and cart management",
+        "Secure checkout & payment flow",
+        "Responsive UI for all devices",
+        "Multi-user support with dynamic data handling"
+      ],
+      technologies: ["React.js", "Redux", "Chakra UI", "Node.js", "Express.js", "MongoDB"],
+      githubUrl: "https://github.com/ProActive44/specialized-bike-app",
+      liveUrl: "https://specializedstore.vercel.app",
       featured: true
     },
     {
       id: 2,
-      title: "Enterprise Resource Management Platform",
-      description: "Built a role-based Enterprise Resource Management (ERM) frontend used by internal teams for product, quotation, and customer operations. Developed responsive UI screens for product management, quotation builder, templates, dashboard, and user management using React + MUI. Integrated REST APIs for all modules: create, update, view, delete, and ensured seamless end-to-end workflows. Implemented advanced table functionalities using TanStack Table: server-side search, sort, filters, pagination, and status indicators. Built a fully dynamic quotation system with template selection, item listing, pricing, discounting, and follow- up history tracking. Added bulk upload(CSV / XLSX) feature enabling enterprises to upload a large product catalog efficiently. Implemented Export to CSV and Web Sync to sync product data with the main e- commerce site. Developed a visually rich analytics dashboard with KPI cards, pie - charts, and activity summaries for real - time business insights. Ensured smooth role - based access control(RBAC) across modules with UI - level permission handling. Optimized performance and improved UX across complex workflows involving thousands of SKUs.",
-      image: "/api/placeholder/400/250",
-      technologies: ["React", "TypeScript", "Bootstrap", "MUI", "TanStack Table", "REST APIs"],
-      // githubUrl: "https://github.com/yourusername/task-manager",
-      // liveUrl: "https://your-taskapp-demo.com",
+      title: "Employee Record Management System (ERMS)",
+      description: [
+        "A full-stack web application designed to manage employee records efficiently within an organization. The system allows administrators to perform CRUD operations on employee data, track records, and maintain structured information with role-based access control.",
+        "The application focuses on building a scalable backend architecture with clean API design and efficient data handling, while providing an intuitive interface for managing organizational data.",
+      ],
+      images: [
+        "/src/assets/Projects/erms/01.png",
+        "/src/assets/Projects/erms/02.png",
+        "/src/assets/Projects/erms/03.png",
+        "/src/assets/Projects/erms/04.png",
+        "/src/assets/Projects/erms/05.png",
+      ],
+      keyFeatures: [
+        "Role-based access control (Admin/HR/Employee)",
+        "Employee Management (CRUD)",
+        "Attendance Tracking",
+        "Leave Management",
+        "Project & Task Management",
+        "Dashboard & Reports",
+        "Secure authentication system(OAuth2/JWT)",
+      ],
+      technologies: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
+      githubUrl: "https://github.com/ProActive44/ERMS",
+      liveUrl: "https://erms-nu.vercel.app",
       featured: true
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "A responsive weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.",
-      image: "/api/placeholder/400/250",
-      technologies: ["React", "TypeScript", "OpenWeather API", "Chart.js"],
-      githubUrl: "https://github.com/yourusername/weather-dashboard",
-      liveUrl: "https://your-weather-demo.com",
+      title: "Multi-Tenant SaaS Application (Tenant-Based Architecture)",
+      description: [
+        "A scalable multi-tenant SaaS application designed to support multiple organizations (tenants) within a single platform, ensuring secure data isolation and efficient resource sharing. Each tenant operates in an independent environment with its own users, roles, and data.",
+        "The system implements tenant-aware authentication, role-based access control, and modular architecture to handle multiple clients seamlessly while maintaining performance and security."
+      ],
+      images: [
+        "/src/assets/Projects/mtenant/01.png",
+        "/src/assets/Projects/mtenant/02.png",
+        "/src/assets/Projects/mtenant/03.png",
+        "/src/assets/Projects/mtenant/04.png",
+      ],
+      keyFeatures: [
+        "Multi-tenant architecture (single app, multiple organizations)",
+        "Tenant-based data isolation",
+        "User authentication & authorization (JWT-based)",
+        "Role-based access control (Admin/User per tenant)",
+        "Tenant-specific dashboards and data views",
+        "Scalable backend structure for handling multiple clients"
+      ],
+      technologies: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "REST APIs", "PostgreSQL", "Prisma"],
+      githubUrl: "https://github.com/ProActive44/Multi-Tenant-SaaS-APP",
+      liveUrl: "https://multi-tenant-saa-s-app.vercel.app",
+      featured: true
+    },
+    {
+      id: 4,
+      title: "TATA 1mg Clone (Healthcare E-commerce Platform)",
+      description: [
+        "A responsive healthcare e-commerce web application inspired by Tata 1mg, enabling users to browse medicines, healthcare products, and manage purchases efficiently. The platform replicates core functionalities of a real-world pharmacy system, including product search, filtering, cart management, and user authentication.",
+        "The application focuses on delivering a seamless user experience with structured product categorization and optimized UI flows, while maintaining scalable frontend architecture and efficient API integration.",
+      ],
+      images: [
+        "/src/assets/Projects/1mg/01.png",
+        "/src/assets/Projects/1mg/02.png",
+        "/src/assets/Projects/1mg/03.png",
+        "/src/assets/Projects/1mg/04.png",
+      ],
+      keyFeatures: [
+        "User authentication (Login/Signup)",
+        "Product browsing with categories",
+        "Search and filter functionality",
+        "Cart management system",
+        "Dynamic product pages",
+        "Responsive design for mobile & desktop"
+      ],
+      technologies: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "REST APIs", "MongoDB"],
+      githubUrl: "https://github.com/ProActive44/TATA-1mg-clone",
+      liveUrl: "https://tata-1mg-store.netlify.app",
+      featured: true
+    },
+    {
+      id: 5,
+      title: "Internal ERP & Inventory Management Platform (PrimeABGB)",
+      description: [
+        "Contributed to a production-grade enterprise dashboard used for managing inventory, warehouse operations, and business analytics for PrimeABGB. The system is built using React and TypeScript with a scalable architecture leveraging Redux Toolkit for state management and a centralized API layer for efficient data handling.",
+        "Designed and worked on modular features such as inventory tracking, warehouse filtering, and real-time dashboard metrics, ensuring seamless interaction between UI, state, and backend services."
+      ],
+      images: [
+        "https://media.licdn.com/dms/image/v2/C5612AQGcGjqCF0JYUQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1633073182640?e=2147483647&v=beta&t=MskMy1eBJ1wnlkbZ0MllrZjJMjQHi3lVXwb2QguU1A0",
+        // "https://cdn.britannica.com/58/75458-050-97475945/Elephants-savanna-elephants-Adult-African-stream-species.jpg"
+      ],
+      keyFeatures: [
+        "Implemented Redux Toolkit slices and async thunks for managing inventory, warehouse, and dashboard data",
+        "Built and integrated API layer using Axios with interceptors for JWT-based authentication",
+        "Developed dynamic data tables with inline editing (EditableCell, filters, pagination)",
+        "Implemented advanced filtering (date range, global search, multi-filters) for inventory and warehouse modules",
+        "Contributed to dashboard analytics with charts and KPI counters",
+        "Worked on modular architecture with reusable components and helper layers",
+        "Integrated PDF export functionality for reports"
+      ],
+      technologies: ["React.js", "TypeScript", "Redux Toolkit", "React Router", "Axios", "REST APIs", "JWT (JSON Web Tokens)", "Bootstrap", "Material-UI"],
+      // githubUrl: "",
+      // liveUrl: "",
+      featured: false
+    },
+    {
+      id: 6,
+      title: "Mecord — Full-Stack ERP & Operations Platform",
+      description: [
+        "A full-stack business operations platform designed to manage inventory, warehouse fulfillment, procurement workflows, and sales lifecycle (enquiry → quotation → sales order) in a unified system.",
+        "Built using React + TypeScript (frontend) and Node.js + Prisma (backend), the application follows a scalable layered architecture with modular domain-based design."
+      ],
+      images: [
+        "https://media.licdn.com/dms/image/v2/C5612AQGcGjqCF0JYUQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1633073182640?e=2147483647&v=beta&t=MskMy1eBJ1wnlkbZ0MllrZjJMjQHi3lVXwb2QguU1A0",
+        // "https://cdn.britannica.com/58/75458-050-97475945/Elephants-savanna-elephants-Adult-African-stream-species.jpg"
+      ],
+      keyFeatures: [
+        "Inventory & warehouse management with packing and dispatch workflows",
+        "End-to-end sales lifecycle (Enquiry → Quotation → Sales Order)",
+        "Procurement system (Purchase Request → Purchase Order with approvals)",
+        "Follow-up tracking and document/attachment management",
+        "Dashboard with KPI metrics and analytics"
+      ],
+      technologies: ["React.js", "TypeScript", "Redux Toolkit", "React Router", "Axios", "Node.js", "Prisma ORM", "PostgreSQL", "JWT (JSON Web Tokens)", "Bootstrap", "Material-UI"],
+      // githubUrl: "",
+      // liveUrl: "",
       featured: false
     }
   ],

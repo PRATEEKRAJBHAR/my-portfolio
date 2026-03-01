@@ -34,7 +34,7 @@ export function ProjectsSection() {
             <h3 className="text-2xl font-bold text-gray-900 theme-dark:text-white text-center mb-8">
               Other Projects
             </h3>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {otherProjects.map((project, index) => (
                 <motion.div
                   key={project.id}

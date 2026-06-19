@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { SectionTitle } from '@/components/SectionTitle';
 import { portfolioConfig } from '@/config/portfolio';
-import profilePic from '@/assets/profie_pic_01.png';
+// import profilePic from '@/assets/profile_picture.png';
+import profilePic from '@/assets/mypic.png';
 
 export function AboutSection() {
   return (
@@ -11,7 +12,7 @@ export function AboutSection() {
           title="About Me"
           subtitle="Get to know me better"
         />
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -20,14 +21,14 @@ export function AboutSection() {
             viewport={{ once: true }}
           >
             <div className="aspect-square rounded-2xl mb-4 overflow-hidden">
-              <img 
-                src={profilePic} 
+              <img
+                src={profilePic}
                 alt={portfolioConfig.name}
-                className="w-full h-full object-cover"
+  className="w-full h-full object-cover object-[center_-20px]"
               />
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

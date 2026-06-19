@@ -10,22 +10,22 @@ export const portfolioConfig = {
     publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string,
   },
   // Personal Information
-  name: "Prasad Mhaske",
-  title: "Full Stack Developer",
-  bio: "Full Stack Web Developer with 2+ years of experience. Proficient in React, Node.js, Express.js, MongoDB, and PostgreSQL. Expertise in building scalable, user-centric applications, designing efficient APIs, and crafting responsive UIs. Specialization in Enterprise Resource Management (ERM) systems, focusing on clean architecture and performance optimization. Strong collaborator with a foundation in TypeScript, Next.js, and system design.",
-  email: "prasadmhaske2001@gmail.com",
+  name: "Prateek Rajbhar",
+  title: "MERN Full Stack Developer",
+  bio: "Full Stack Web Developer with 1.5 years of experience. Proficient in React, Node.js, Express.js, MongoDB . Expertise in building scalable, user-centric applications, designing efficient APIs, and crafting responsive UIs. Specialization in Enterprise Resource Management (ERM) systems, focusing on clean architecture and performance optimization. Strong collaborator with a foundation in TypeScript.",
+  email: "prateekrajbhar3311@gmail.com",
   location: "Mumbai, India",
 
   // Social Links
   socials: {
-    github: "https://github.com/ProActive44",
-    linkedin: "https://www.linkedin.com/in/prasad-mhaske-88a177247",
+    github: "https://github.com/PRATEEKRAJBHAR",
+    linkedin: "https://www.linkedin.com/in/prateek-rajbhar-820010248",
   },
 
   // Skills with categories
   skills: {
     "Frontend": [
-      "React.js", "Next.js", "TypeScript", "JavaScript (ES6+)",
+      "React.js", "TypeScript", "JavaScript (ES6+)",
       "Tailwind CSS", "HTML5", "CSS3",
       "Redux / Context API",
       "SSR / SSG / ISR",
@@ -35,32 +35,27 @@ export const portfolioConfig = {
       "Node.js", "Express.js",
       "REST API Development",
       "Authentication (JWT, OAuth)",
-      "WebSockets (Socket.IO)",
-      "Prisma ORM"
+
     ],
     "Databases": [
-      "MongoDB", "PostgreSQL",
+      "MongoDB",
       "Database Design",
       "Indexing & Query Optimization"
     ],
     "DevOps & Tools": [
       "Git & GitHub",
-      "Docker",
-      "AWS (S3, EC2)",
-      "CI/CD (GitHub Actions)",
-      "Vercel", "Render"
+      "Vercel", "Render",
+      "Netlify"
     ],
     "Core Concepts": [
       "Data Structures & Algorithms",
       "OOPs",
-      "System Design Basics",
       "Design Patterns",
       "API Design Principles"
     ],
     "Other Tools": [
       "Figma",
       "VS Code",
-      "Webpack",
       "Vite"
     ]
   },
@@ -69,37 +64,56 @@ export const portfolioConfig = {
   projects: [
     {
       id: 1,
-      title: "Specialized Cycle Store (MERN Stack E-commerce App)",
+      title: "Service Management Portal (MERN Stack | Full Stack Web Application)",
       description: [
-        "A fully responsive, multi-user e-commerce web application designed for cycling enthusiasts to browse, explore, and purchase modern bicycles and accessories. The platform delivers a seamless shopping experience with essential features like authentication, product browsing, wishlist management, cart functionality, and secure checkout.",
-        "Built using the MERN stack, the application ensures efficient data handling, scalable backend architecture, and smooth user interactions across devices."
+        "Built a comprehensive service center management system enabling customer management, service tracking, technician assignment, inventory management, automated email notifications, and PDF report generation with role-based access control."
       ],
       images: [
-        "/src/assets/Projects/01.png",
-        "/src/assets/Projects/02.png",
-        "/src/assets/Projects/03.png",
-        "/src/assets/Projects/04.png",
-        "/src/assets/Projects/05.png"
+        "/src/assets/Projects/img1.png",
+        "/src/assets/Projects/img2.png",
+        "/src/assets/Projects/img3.png",
+        "/src/assets/Projects/img4.png",
+        "/src/assets/Projects/img5.png",
+        "/src/assets/Projects/img6.png",
+        "/src/assets/Projects/img7.png",
+        "/src/assets/Projects/img8.png"
       ],
       keyFeatures: [
-        "User authentication (Login/Signup)",
-        "Product listing with detailed view",
-        "Wishlist and cart management",
-        "Secure checkout & payment flow",
-        "Responsive UI for all devices",
+        "User authentication (Login/Signup,forget password)",
+        "Service listing with detailed view",
+        " Authentication & Authorization",
+        " Customer Management",
+        " Service Request Tracking",
+        " Technician Assignment",
+        " Inventory Management",
+        " PDF Reports",
+        " Email Notifications",
+        " Dashboard & Analytics",
+        " Responsive Design",
         "Multi-user support with dynamic data handling"
       ],
-      technologies: ["React.js", "Redux", "Chakra UI", "Node.js", "Express.js", "MongoDB"],
-      githubUrl: "https://github.com/ProActive44/specialized-bike-app",
-      liveUrl: "https://specializedstore.vercel.app",
+      technologies: [
+        " React.js",
+        " Redux Toolkit",
+        "Redux Thunk",
+        " Node.js",
+        " Express.js",
+        " MongoDB",
+        " JWT Authentication",
+        " Material UI",
+        " Nodemailer",
+        " Puppeteer (PDF Generation)"],
+      // githubFrontEndUrl: "https://github.com/PRATEEKRAJBHAR/Service_Center_frontend",
+      // githubBackEndUrl: "https://github.com/PRATEEKRAJBHAR/Service_Center_backend",
+      githubUrl: "https://github.com/PRATEEKRAJBHAR/Service_Center_frontend",
+      liveUrl: "https://service-center-frontend.vercel.app/",
       featured: true
     },
     {
       id: 2,
-      title: "Employee Record Management System (ERMS)",
+      title: "MERN Stack Movie Collection Application ",
       description: [
-        "A full-stack web application designed to manage employee records efficiently within an organization. The system allows administrators to perform CRUD operations on employee data, track records, and maintain structured information with role-based access control.",
-        "The application focuses on building a scalable backend architecture with clean API design and efficient data handling, while providing an intuitive interface for managing organizational data.",
+        "This is a full-stack MERN Movie Collection application with JWT-based authentication and role-based access control. Users can browse, search, and sort movies, while administrators can add, edit, and delete movie records."
       ],
       images: [
         "/src/assets/Projects/erms/01.png",
@@ -108,103 +122,188 @@ export const portfolioConfig = {
         "/src/assets/Projects/erms/04.png",
         "/src/assets/Projects/erms/05.png",
       ],
-      keyFeatures: [
-        "Role-based access control (Admin/HR/Employee)",
-        "Employee Management (CRUD)",
-        "Attendance Tracking",
-        "Leave Management",
-        "Project & Task Management",
-        "Dashboard & Reports",
-        "Secure authentication system(OAuth2/JWT)",
+       keyFeatures: [
+  "👤 User Features",
+  "View all movies with pagination",
+  "Search movies by name or description",
+  "Sort movies by Name",
+  "Sort movies by Rating",
+  "Sort movies by Release Date",
+
+  "🛡 Admin Features",
+  "Add new movie",
+  "Edit movie details",
+  "Delete movies",
+  "Access secured admin routes",
+
+  "🔐 Authentication & Authorization",
+  "JWT-based authentication",
+  "Role-based access control (Admin & User)",
+  "Admin-only protected routes",
+  "Default role for all users is USER",
+
+  "👨‍💼 Admin Credentials",
+  "Email: admin@gmail.com",
+  "Password: admin"
+],
+      technologies: [
+         " React.js",
+"Material-UI (MUI)",
+"Redux / Context API",
+"React Router DOM",
+"Axios",
+"Backend",
+"Node.js",
+"Express.js",
+"MongoDB (MongoDB Atlas / Local)",
+"JWT Authentication",
+"Authentication & Authorization",
+"JWT-based authentication",
+"Role-based access control (Admin & User)",
+"Admin-only protected routes",
+"Default role for all users is USER",
+"Admin Credentials Email: admin@gmail.com Password: admin",
       ],
-      technologies: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
-      githubUrl: "https://github.com/ProActive44/ERMS",
-      liveUrl: "https://erms-nu.vercel.app",
+      githubUrl: "https://github.com/PRATEEKRAJBHAR/mern-movie-collection-frontend",
+      liveUrl: "https://mern-movie-collection-frontend.vercel.app/",
       featured: true
     },
     {
       id: 3,
-      title: "Multi-Tenant SaaS Application (Tenant-Based Architecture)",
+      title: "Expense Tracker App",
       description: [
-        "A scalable multi-tenant SaaS application designed to support multiple organizations (tenants) within a single platform, ensuring secure data isolation and efficient resource sharing. Each tenant operates in an independent environment with its own users, roles, and data.",
-        "The system implements tenant-aware authentication, role-based access control, and modular architecture to handle multiple clients seamlessly while maintaining performance and security."
+        `A simple Expense Tracker application built using Vanilla JavaScript, HTML, CSS, and LocalStorage.
+This app allows users to track their daily expenses, manage records, and persist data in the browser without using any backend.`
       ],
       images: [
-        "/src/assets/Projects/mtenant/01.png",
-        "/src/assets/Projects/mtenant/02.png",
-        "/src/assets/Projects/mtenant/03.png",
-        "/src/assets/Projects/mtenant/04.png",
+        "/src/assets/Projects/expence/1.png",
+        "/src/assets/Projects/expence/2.png",
+        "/src/assets/Projects/expence/3.png",
+        "/src/assets/Projects/expence/4.png",
       ],
-      keyFeatures: [
-        "Multi-tenant architecture (single app, multiple organizations)",
-        "Tenant-based data isolation",
-        "User authentication & authorization (JWT-based)",
-        "Role-based access control (Admin/User per tenant)",
-        "Tenant-specific dashboards and data views",
-        "Scalable backend structure for handling multiple clients"
+     keyFeatures: [
+ " Add new expenses with amount and description",
+"View all added expenses in a list",
+"Delete individual expenses",
+"Automatically calculate total expenses",
+"Data stored using browser LocalStorage",
+"Responsive and beginner-friendly UI"
+],
+      technologies:[
+        "HTML5",
+"CSS3",
+"JavaScript (ES6)",
+"Browser LocalStorage"
       ],
-      technologies: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "REST APIs", "PostgreSQL", "Prisma"],
-      githubUrl: "https://github.com/ProActive44/Multi-Tenant-SaaS-APP",
-      liveUrl: "https://multi-tenant-saa-s-app.vercel.app",
+      githubUrl: "https://github.com/PRATEEKRAJBHAR/expence-tracker-app",
+      liveUrl: "https://expence-tracker-app-seven.vercel.app",
       featured: true
     },
     {
       id: 4,
-      title: "TATA 1mg Clone (Healthcare E-commerce Platform)",
+      title: "Smart Quiz Management System",
       description: [
-        "A responsive healthcare e-commerce web application inspired by Tata 1mg, enabling users to browse medicines, healthcare products, and manage purchases efficiently. The platform replicates core functionalities of a real-world pharmacy system, including product search, filtering, cart management, and user authentication.",
-        "The application focuses on delivering a seamless user experience with structured product categorization and optimized UI flows, while maintaining scalable frontend architecture and efficient API integration.",
+        "Developed a Smart Quiz Management System that allows examiners to create and manage quizzes by adding multiple questions, options, correct answers, marks, and timers. ",
+        "Implemented countdown-based quiz execution and auto-save functionality to prevent data loss when the quiz is not manually submitted."
       ],
       images: [
-        "/src/assets/Projects/1mg/01.png",
-        "/src/assets/Projects/1mg/02.png",
-        "/src/assets/Projects/1mg/03.png",
-        "/src/assets/Projects/1mg/04.png",
+        "/src/assets/Projects/quize/a.png",
+        "/src/assets/Projects/quize/b.png",
+        "/src/assets/Projects/quize/c.png",
+        "/src/assets/Projects/quize/d.png",
+         "/src/assets/Projects/quize/e.png",
+        "/src/assets/Projects/quize/f.png",
       ],
       keyFeatures: [
-        "User authentication (Login/Signup)",
-        "Product browsing with categories",
-        "Search and filter functionality",
-        "Cart management system",
-        "Dynamic product pages",
-        "Responsive design for mobile & desktop"
+        "Create multiple quizzes",
+"Add unlimited questions dynamically",
+"Add multiple options for each question",
+"Set correct answers",
+"Assign marks to each question",
+"Configure quiz duration and timer",
+"Edit and manage quiz questions",
+"Start and monitor quizzes",
       ],
-      technologies: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "REST APIs", "MongoDB"],
-      githubUrl: "https://github.com/ProActive44/TATA-1mg-clone",
-      liveUrl: "https://tata-1mg-store.netlify.app",
+      technologies:[
+        "HTML5",
+  "CSS3",
+  "JavaScript (ES6)",
+  "DOM Manipulation",
+  "Event Handling",
+  "Dynamic Form Management",
+  "CRUD Operations",
+  "Timers and Intervals",
+  "Local Storage",
+  "Form Validation",
+  "Array and Object Manipulation",
+  "State Management",
+  "Responsive Web Design",
+  "Problem Solving",
+  "Algorithmic Thinking"
+      ],
+      githubUrl: "https://github.com/PRATEEKRAJBHAR/quize-app",
+      liveUrl: "https://quize-app-gilt.vercel.app",
       featured: true
     },
     {
       id: 5,
-      title: "Internal ERP & Inventory Management Platform (PrimeABGB)",
+      title: "E-Commerce Website",
       description: [
-        "Contributed to a production-grade enterprise dashboard used for managing inventory, warehouse operations, and business analytics for PrimeABGB. The system is built using React and TypeScript with a scalable architecture leveraging Redux Toolkit for state management and a centralized API layer for efficient data handling.",
-        "Designed and worked on modular features such as inventory tracking, warehouse filtering, and real-time dashboard metrics, ensuring seamless interaction between UI, state, and backend services."
+        "A simple and responsive e-commerce website built using only HTML and CSS. This project is designed to showcase a basic online shopping interface, including product listings, navigation bar, banners, and a clean user interface."
       ],
       images: [
-        "https://media.licdn.com/dms/image/v2/C5612AQGcGjqCF0JYUQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1633073182640?e=2147483647&v=beta&t=MskMy1eBJ1wnlkbZ0MllrZjJMjQHi3lVXwb2QguU1A0",
+        // "https://media.licdn.com/dms/image/v2/C5612AQGcGjqCF0JYUQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1633073182640?e=2147483647&v=beta&t=MskMy1eBJ1wnlkbZ0MllrZjJMjQHi3lVXwb2QguU1A0",
         // "https://cdn.britannica.com/58/75458-050-97475945/Elephants-savanna-elephants-Adult-African-stream-species.jpg"
+          "/src/assets/Projects/ecommerce/x.png",
+        "/src/assets/Projects/ecommerce/y.png",
+        "/src/assets/Projects/ecommerce/z.png",
       ],
       keyFeatures: [
-        "Implemented Redux Toolkit slices and async thunks for managing inventory, warehouse, and dashboard data",
-        "Built and integrated API layer using Axios with interceptors for JWT-based authentication",
-        "Developed dynamic data tables with inline editing (EditableCell, filters, pagination)",
-        "Implemented advanced filtering (date range, global search, multi-filters) for inventory and warehouse modules",
-        "Contributed to dashboard analytics with charts and KPI counters",
-        "Worked on modular architecture with reusable components and helper layers",
-        "Integrated PDF export functionality for reports"
+        " Responsive design",
+" Home page with product display",
+" Navigation bar and footer",
+" Product cards and categories",
+" Pure HTML and CSS implementation",
+" No JavaScript or backend functionality"
       ],
-      technologies: ["React.js", "TypeScript", "Redux Toolkit", "React Router", "Axios", "REST APIs", "JWT (JSON Web Tokens)", "Bootstrap", "Material-UI"],
-      // githubUrl: "",
-      // liveUrl: "",
+      technologies:["Html","CSS"],
+      githubUrl: "https://github.com/PRATEEKRAJBHAR/Simple-E-Commerce-Website",
+      liveUrl: "simple-e-commerce-website-tan.vercel.app",
+      featured: false
+    },
+     {
+      id: 6,
+      title: "Digital-Visiting-Card",
+      description: [
+        " Developed a responsive digital visiting card showcasing professional profile, contact details, portfolio, and social links"
+      ],
+      images: [
+
+          "/src/assets/Projects/ecommerce/card.png",
+
+      ],
+      keyFeatures: [
+       "Professional profile card",
+"Responsive design",
+"Contact information",
+"Social media links",
+"Portfolio website link",
+"Modern UI with hover effects"
+      ],
+      technologies:["React.js",
+"CSS3",
+"React Icons",
+"Vite"],
+      githubUrl: "https://github.com/PRATEEKRAJBHAR/Digital-Visiting-Card",
+      liveUrl: "https://digital-visiting-card-jade.vercel.app",
       featured: false
     },
     {
-      id: 6,
+      id: 7,
       title: "Mecord — Full-Stack ERP & Operations Platform",
       description: [
-        "A full-stack business operations platform designed to manage inventory, warehouse fulfillment, procurement workflows, and sales lifecycle (enquiry → quotation → sales order) in a unified system.",
-        "Built using React + TypeScript (frontend) and Node.js + Prisma (backend), the application follows a scalable layered architecture with modular domain-based design."
+        "Enterprise Resource Planning (ERP) system developed using MERN Stack and TypeScript. The platform streamlines procurement",
+        " inventory, warehouse management, quotations, orders, payments, and user administration. Implemented dynamic PDF generation for Purchase Orders, Quotations, and business reports with real-time data integration."
       ],
       images: [
         "https://media.licdn.com/dms/image/v2/C5612AQGcGjqCF0JYUQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1633073182640?e=2147483647&v=beta&t=MskMy1eBJ1wnlkbZ0MllrZjJMjQHi3lVXwb2QguU1A0",
@@ -217,7 +316,72 @@ export const portfolioConfig = {
         "Follow-up tracking and document/attachment management",
         "Dashboard with KPI metrics and analytics"
       ],
-      technologies: ["React.js", "TypeScript", "Redux Toolkit", "React Router", "Axios", "Node.js", "Prisma ORM", "PostgreSQL", "JWT (JSON Web Tokens)", "Bootstrap", "Material-UI"],
+      technologies: ["React.js", "TypeScript", "Redux Toolkit", "React Router", "Axios", "Node.js",  "JWT (JSON Web Tokens)", "Bootstrap", "Material-UI"],
+      // githubUrl: "",
+      // liveUrl: "",
+      featured: false
+    },
+    {
+      id: 8,
+      title: "HRMS & Payroll Management System",
+      description: [
+        "A comprehensive Human Resource Management and Payroll platform developed using MERN Stack and TypeScript.",
+         "The system streamlines employee onboarding, payroll processing, leave management, salary calculations, deductions,",
+          "and automated salary slip generation. It supports multi-step employee registration, salary history tracking, PDF generation,",
+           "and email automation for efficient workforce management."
+      ],
+      images: [
+        "https://media.licdn.com/dms/image/v2/C5612AQGcGjqCF0JYUQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1633073182640?e=2147483647&v=beta&t=MskMy1eBJ1wnlkbZ0MllrZjJMjQHi3lVXwb2QguU1A0",
+        // "https://cdn.britannica.com/58/75458-050-97475945/Elephants-savanna-elephants-Adult-African-stream-species.jpg"
+      ],
+      keyFeatures: [
+        " Employee Onboarding & Management",
+" Multi-Step Employee Registration",
+" Payroll Processing & Salary Calculation",
+" Leave & Attendance Management",
+" Loss of Pay (LOP) Tracking",
+" Salary Deduction Management",
+" Automated Salary Slip Generation",
+" PDF Export Functionality",
+" Salary Slip History & Records",
+" Email Notification & Salary Slip Delivery",
+" Employee Profile Management",
+" Role-Based Access Control",
+" Responsive Dashboard & Reporting"
+      ],
+      technologies: ["React.js", "TypeScript", "Redux Toolkit", "React Router", "Axios", "Node.js",  "JWT (JSON Web Tokens)", "Bootstrap", "Material-UI","Express.js","MongoDB","Tailwind CSS","SweetAlert2","PDF Generation","Email Automation"],
+      // githubUrl: "",
+      // liveUrl: "",
+      featured: false
+    },
+     {
+      id: 9,
+      title: "TOPL",
+      description: [
+        "TOPL Employee Management System is an enterprise-level workforce management application developed using the MERN Stack.",
+         "The platform provides secure role-based access control (RBAC) allowing different user types such as Super Admin, Admin, User, and Client to access features based on assigned permissions.",
+        " The system enables employee management, profile access, permission handling, and secure data visibility across organizational roles."
+
+      ],
+      images: [
+        "https://media.licdn.com/dms/image/v2/C5612AQGcGjqCF0JYUQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1633073182640?e=2147483647&v=beta&t=MskMy1eBJ1wnlkbZ0MllrZjJMjQHi3lVXwb2QguU1A0",
+        // "https://cdn.britannica.com/58/75458-050-97475945/Elephants-savanna-elephants-Adult-African-stream-species.jpg"
+      ],
+      keyFeatures: [
+      " Role-Based Access Control (RBAC)",
+" Super Admin, Admin, User & Client Roles",
+" Dynamic Permission Management",
+" Employee Profile Management",
+" User Creation & Management",
+" View, Edit & Delete Access Control",
+" Secure API Authorization",
+" Role-Based UI Rendering",
+" Employee Listing & Tracking",
+" Dashboard Access Restrictions",
+" Modular Backend Architecture",
+" Responsive Admin Panel"
+      ],
+      technologies: ["React.js", "Redux Toolkit", "React Router", "Axios", "Node.js",  "JWT (JSON Web Tokens)", "Bootstrap", "Material-UI","Express.js","MongoDB","Tailwind CSS","SweetAlert2","PDF Generation","Email Automation"],
       // githubUrl: "",
       // liveUrl: "",
       featured: false
@@ -228,29 +392,21 @@ export const portfolioConfig = {
   experience: [
     {
       id: 1,
-      title: "Full Stack Developer",
-      company: "Metaphi Innovations",
-      duration: "Sep 2025 - Present",
+      title: "Mern Full Stack Developer",
+      company: "K DigitalCurry",
+      duration: "Oct 2024 - March 2026",
       description: [
-        "Developed and maintained ERM system modules using React, Node.js, Express.js, MongoDB, PostgreSQL, and Prisma.",
-        "Built scalable REST APIs and optimized backend workflows for efficient data handling across ERM components.",
-        "Implemented secure authentication and authorization using JWT and OAuth.",
+        "Developed scalable frontend applications using React.js, TypeScript, Material UI, and Tailwind CSS.",
+        "Built and integrated REST APIs using Node.js, Express.js, and MongoDB.",
+        "Developed dynamic PDF generation modules for Purchase Orders, Salary Slips, Quotations, and business reports.",
+        "Implemented payroll management features including salary calculations, deductions, leave tracking, and automated email delivery.",
+        "Designed role-based authentication and authorization systems with secure permission management.",
+        "Worked on enterprise modules including User Management, Inventory, Warehouse, Procurement, and Employee Management.",
+        "Collaborated with cross-functional teams to deliver business-critical solutions and improve operational efficiency.",
         "Improved front-end performance and ensured responsive, cross-browser compatibility.",
         "Collaborated with product, design, and QA teams to deliver reliable and production-ready features."
       ]
     },
-    {
-      id: 2,
-      title: "Full Stack Developer",
-      company: "Kalvium",
-      duration: "Oct 2023 - May 2025",
-      description: [
-        "Built and improved full-stack features for internal platforms using React, Node.js, Express.js, MongoDB.",
-        "Redesigned the Student Profile module, enhancing UI/UX and performance.",
-        "Developed REST APIs and optimized database interactions for reliable data flow.",
-        "Collaborated with product and engineering teams to deliver stable, production-ready features.",
-        "Contributed to code quality through reviews and best-practice implementation."
-      ]
-    }
+
   ]
 };

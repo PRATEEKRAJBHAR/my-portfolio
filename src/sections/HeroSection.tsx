@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { ChevronDown, Download, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/Button';
 import { portfolioConfig } from '@/config/portfolio';
+import resumePdf from '@/public/MERN.pdf';
+
 
 export function HeroSection() {
   const scrollToAbout = () => {
@@ -48,14 +50,31 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-5"
           >
-            <Button size="lg" className="flex items-center gap-2">
-              <Mail className="h-5 w-5" />
-              Get In Touch
-            </Button>
-            <Button variant="outline" size="lg" className="flex items-center gap-2">
-              <Download className="h-5 w-5" />
-              Download Resume
-            </Button>
+            <a href={`mailto:${portfolioConfig.email}`}>
+              <Button  size="lg" className="flex items-center gap-2">
+                <Mail className="h-5 w-5" />
+                Get In Touch
+              </Button>
+            </a>
+
+
+              <Button
+  asChild
+  variant="outline"
+  size="lg"
+  className="flex items-center gap-2"
+>
+  <a
+    href={resumePdf}
+    download="Pratik_Resume.pdf"
+    className="flex items-center gap-2"
+  >
+    <Download className="h-5 w-5" />
+    <span>Download Resume</span>
+  </a>
+</Button>
+
+
           </motion.div>
 
           <motion.div

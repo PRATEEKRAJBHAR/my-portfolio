@@ -6,6 +6,11 @@ import { portfolioConfig } from '@/config/portfolio';
 export function ProjectsSection() {
   const featuredProjects = portfolioConfig.projects.filter(project => project.featured);
   const otherProjects = portfolioConfig.projects.filter(project => !project.featured);
+  // const prevCompanyProjects = portfolioConfig.projects.filter(project => !project.featured);
+// console.log(featuredProjects,"feature project");
+// console.log(otherProjects,"otherProjects project");
+// console.log(prevCompanyProjects,"prevCompanyProjects project");
+
 
   return (
     <section id="projects" className="py-20 bg-white theme-dark:bg-gray-900">
@@ -14,7 +19,7 @@ export function ProjectsSection() {
           title="Featured Projects"
           subtitle="Some of my recent work"
         />
-        
+
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {featuredProjects.map((project, index) => (
             <motion.div
@@ -28,7 +33,7 @@ export function ProjectsSection() {
             </motion.div>
           ))}
         </div>
-        
+
         {otherProjects.length > 0 && (
           <>
             <h3 className="text-2xl font-bold text-gray-900 theme-dark:text-white text-center mb-8">
@@ -49,6 +54,7 @@ export function ProjectsSection() {
             </div>
           </>
         )}
+
       </div>
     </section>
   );

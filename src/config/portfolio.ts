@@ -1,6 +1,42 @@
 /**
  * Portfolio configuration with personal information, skills, projects, and experience data.
  */
+// Service Management Portal
+import img1 from "../assets/Projects/img1.png";
+import img2 from "../assets/Projects/img2.png";
+import img3 from "../assets/Projects/img3.png";
+import img4 from "../assets/Projects/img4.png";
+import img5 from "../assets/Projects/img5.png";
+import img6 from "../assets/Projects/img6.png";
+import img7 from "../assets/Projects/img7.png";
+import img8 from "../assets/Projects/img8.png";
+
+// Movie Collection
+import erms01 from "../assets/Projects/erms/01.png";
+import erms02 from "../assets/Projects/erms/02.png";
+import erms03 from "../assets/Projects/erms/03.png";
+import erms04 from "../assets/Projects/erms/04.png";
+import erms05 from "../assets/Projects/erms/05.png";
+
+// Expense Tracker
+import expense1 from "../assets/Projects/expence/1.png";
+import expense2 from "../assets/Projects/expence/2.png";
+import expense3 from "../assets/Projects/expence/3.png";
+import expense4 from "../assets/Projects/expence/4.png";
+
+// Quiz App
+import quizA from "../assets/Projects/quize/a.png";
+import quizB from "../assets/Projects/quize/b.png";
+import quizC from "../assets/Projects/quize/c.png";
+import quizD from "../assets/Projects/quize/d.png";
+import quizE from "../assets/Projects/quize/e.png";
+import quizF from "../assets/Projects/quize/f.png";
+
+// Ecommerce
+import ecommerceX from "../assets/Projects/ecommerce/x.png";
+import ecommerceY from "../assets/Projects/ecommerce/y.png";
+import ecommerceZ from "../assets/Projects/ecommerce/z.png";
+import visitingCard from "../assets/Projects/ecommerce/card.png";
 
 export const portfolioConfig = {
   // EmailJS Configuration
@@ -68,16 +104,16 @@ export const portfolioConfig = {
       description: [
         "Built a comprehensive service center management system enabling customer management, service tracking, technician assignment, inventory management, automated email notifications, and PDF report generation with role-based access control."
       ],
-      images: [
-        "/src/assets/Projects/img1.png",
-        "/src/assets/Projects/img2.png",
-        "/src/assets/Projects/img3.png",
-        "/src/assets/Projects/img4.png",
-        "/src/assets/Projects/img5.png",
-        "/src/assets/Projects/img6.png",
-        "/src/assets/Projects/img7.png",
-        "/src/assets/Projects/img8.png"
-      ],
+    images: [
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+],
       keyFeatures: [
         "User authentication (Login/Signup,forget password)",
         "Service listing with detailed view",
@@ -115,13 +151,13 @@ export const portfolioConfig = {
       description: [
         "This is a full-stack MERN Movie Collection application with JWT-based authentication and role-based access control. Users can browse, search, and sort movies, while administrators can add, edit, and delete movie records."
       ],
-      images: [
-        "/src/assets/Projects/erms/01.png",
-        "/src/assets/Projects/erms/02.png",
-        "/src/assets/Projects/erms/03.png",
-        "/src/assets/Projects/erms/04.png",
-        "/src/assets/Projects/erms/05.png",
-      ],
+   images: [
+  erms01,
+  erms02,
+  erms03,
+  erms04,
+  erms05,
+],
        keyFeatures: [
   "👤 User Features",
   "View all movies with pagination",
@@ -175,12 +211,12 @@ export const portfolioConfig = {
         `A simple Expense Tracker application built using Vanilla JavaScript, HTML, CSS, and LocalStorage.
 This app allows users to track their daily expenses, manage records, and persist data in the browser without using any backend.`
       ],
-      images: [
-        "/src/assets/Projects/expence/1.png",
-        "/src/assets/Projects/expence/2.png",
-        "/src/assets/Projects/expence/3.png",
-        "/src/assets/Projects/expence/4.png",
-      ],
+     images: [
+  expense1,
+  expense2,
+  expense3,
+  expense4,
+],
      keyFeatures: [
  " Add new expenses with amount and description",
 "View all added expenses in a list",
@@ -206,14 +242,14 @@ This app allows users to track their daily expenses, manage records, and persist
         "Developed a Smart Quiz Management System that allows examiners to create and manage quizzes by adding multiple questions, options, correct answers, marks, and timers. ",
         "Implemented countdown-based quiz execution and auto-save functionality to prevent data loss when the quiz is not manually submitted."
       ],
-      images: [
-        "/src/assets/Projects/quize/a.png",
-        "/src/assets/Projects/quize/b.png",
-        "/src/assets/Projects/quize/c.png",
-        "/src/assets/Projects/quize/d.png",
-         "/src/assets/Projects/quize/e.png",
-        "/src/assets/Projects/quize/f.png",
-      ],
+     images: [
+  quizA,
+  quizB,
+  quizC,
+  quizD,
+  quizE,
+  quizF,
+],
       keyFeatures: [
         "Create multiple quizzes",
 "Add unlimited questions dynamically",
@@ -251,13 +287,11 @@ This app allows users to track their daily expenses, manage records, and persist
       description: [
         "A simple and responsive e-commerce website built using only HTML and CSS. This project is designed to showcase a basic online shopping interface, including product listings, navigation bar, banners, and a clean user interface."
       ],
-      images: [
-        // "https://media.licdn.com/dms/image/v2/C5612AQGcGjqCF0JYUQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1633073182640?e=2147483647&v=beta&t=MskMy1eBJ1wnlkbZ0MllrZjJMjQHi3lVXwb2QguU1A0",
-        // "https://cdn.britannica.com/58/75458-050-97475945/Elephants-savanna-elephants-Adult-African-stream-species.jpg"
-          "/src/assets/Projects/ecommerce/x.png",
-        "/src/assets/Projects/ecommerce/y.png",
-        "/src/assets/Projects/ecommerce/z.png",
-      ],
+     images: [
+  ecommerceX,
+  ecommerceY,
+  ecommerceZ,
+],
       keyFeatures: [
         " Responsive design",
 " Home page with product display",
@@ -278,10 +312,8 @@ This app allows users to track their daily expenses, manage records, and persist
         " Developed a responsive digital visiting card showcasing professional profile, contact details, portfolio, and social links"
       ],
       images: [
-
-          "/src/assets/Projects/ecommerce/card.png",
-
-      ],
+  visitingCard,
+],
       keyFeatures: [
        "Professional profile card",
 "Responsive design",

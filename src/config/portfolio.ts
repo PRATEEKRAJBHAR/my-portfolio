@@ -254,7 +254,7 @@ This app allows users to track their daily expenses, manage records, and persist
       images: [
         // "https://media.licdn.com/dms/image/v2/C5612AQGcGjqCF0JYUQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1633073182640?e=2147483647&v=beta&t=MskMy1eBJ1wnlkbZ0MllrZjJMjQHi3lVXwb2QguU1A0",
         // "https://cdn.britannica.com/58/75458-050-97475945/Elephants-savanna-elephants-Adult-African-stream-species.jpg"
-          "/src/public/project/ecommerce/x.png",
+          "/src/assets/Projects/ecommerce/x.png",
         "/src/assets/Projects/ecommerce/y.png",
         "/src/assets/Projects/ecommerce/z.png",
       ],
